@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Battleship Guess</title>
+	<script src="parseGuess.js"></script>
+	<script>
+window.onload = function() {
+	let guess = prompt("Enter a guess (e.g. A0)");
+	let location = parseGuess(guess);
+	if (location) {
+		let guessP = document.getElementById("guess");
+		guessP.innerHTML = location;
+	} else {
+		console.log("Unable to parse the guess");
+	}
+};
+	</script>
+</head>
+<body>
+	<h1>Battleship Guess</h1>
+	<p>Get the guess from the user and test</p>
+	<p id="guess"></p>
+</body>
+</html>
+

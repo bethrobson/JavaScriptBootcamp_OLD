@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Battleship Guess</title>
+	<script>
+	</script>
+</head>
+<body>
+	<h1>Battleship Guess</h1>
+	<p>Get the guess from the user and test</p>
+	<script>
+let guess = prompt("Enter a guess (e.g. A0)");
+// first test to see if user clicked Cancel or 
+// OK without entering anything, 
+// and the length of the guess
+if (guess === null || guess === "" || guess.length !== 2) {
+	// alert the user
+	alert("Oops, please enter a letter and a number on the board.");
+} else {
+	let rowStr = guess.charAt(0);
+	let row;
+	// for now, do a simple test and convert, handle only A & B
+	if (rowStr === "A") {
+		row = 0;
+	} else if (rowStr === "B") {
+		row = 1;
+	} // we'll handle all rows A-G later!
+	let colStr = guess.charAt(1);
+	let col = parseInt(colStr);
+	// if row is still undefined, or col couldn't be parsed....
+	if (isNaN(row) || isNaN(col)) {
+		alert("Oops, that isn't on the board.");
+	} else {
+		console.log(`Row: ${ row }, Col: ${ col }`);
+	}
+}
+	</script>
+</body>
+</html>
+

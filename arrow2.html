@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rewrite bark as an arrow function </title>
+</head>
+<body>
+	<h1>Make your dog bark</h1>
+	<script>
+	let bark = (name, weight) => {
+		let barkSound = "";
+		if (weight > 20) {
+			barkSound = "WOOF WOOF";
+		} else {
+			barkSound = "woof woof";
+		}
+		return `${ name } says ${ barkSound }`;
+	};
+	let dogName = "Rover";
+	let dogWeight = 23;
+	let result = bark(dogName, dogWeight);
+	console.log(result);
+	</script>
+</body>
+</html>

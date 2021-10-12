@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Objects from literals and classes</title>
+</head>
+<body>
+<h1>Objects from literals and classes</h1>
+<script>
+class Dog {
+	constructor(name, weight, breed) {
+		this.name = name;
+		this.weight = weight;
+		this.breed = breed;
+	}
+	bark() {
+		if (this.weight > 15) {
+			console.log("WOOF WOOF");
+		} else {
+			console.log("woof woof");
+		}
+	}
+}
+let rover = new Dog("Rover", 23, "Mixed", true);
+let fido = new Dog("Fido", 12, "Mixed");
+let spot = new Dog("Spot", 10, "Chihuahua");
+
+</script>
+</body>
+</html>

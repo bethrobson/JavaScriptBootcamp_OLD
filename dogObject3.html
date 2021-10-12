@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object Methods</title>
+</head>
+<body>
+<h1>Object Methods</h1>
+<script>
+class Dog {
+	constructor(name, weight, breed) {
+		this.name = name;
+		this.weight = weight;
+		this.breed = breed;
+	}
+	bark() {
+		if (this.weight > 20) {
+			console.log(`${ this.name } says WOOF WOOF`);
+		} else {
+			console.log(`${ this.name } says woof woof`);
+		}
+	}
+}
+let rover = new Dog("Rover", 23, "Mixed");
+let fido = new Dog("Fido", 12, "Mixed");
+let spot = new Dog("Spot", 10, "Chihuahua");
+
+fido.weight = 11; // change a property
+fido.age = 4; // add a property on the fly
+delete fido.weight; // remove a property on the fly
+
+rover.bark();
+fido.bark();
+spot.bark();
+
+</script>
+</body>
+</html>

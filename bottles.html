@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>99 Bottles of Beer</title>
+<script>
+function bottlesSong() {
+	let word = "bottles";
+	let count = 99;
+	while (count > 0) {
+		console.log(`${count} ${word} of beer on the wall`);
+		console.log(`${count} ${word} of beer,`);
+		console.log("Take one down, pass it around,");
+		count = count - 1;
+		if (count > 0) {
+			console.log(`${count} ${word} of beer on the wall`);
+		} else {
+			console.log(`No more ${word} of beer on the wall`);
+		}
+	}
+}
+bottlesSong();
+</script>
+</head>
+<body>
+<h1>99 Bottles of Beer</h1>
+</body>
+</html>

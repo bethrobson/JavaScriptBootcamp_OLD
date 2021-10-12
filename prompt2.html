@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prompt: Convert a number to a string</title>
+	<script>
+	</script>
+</head>
+<body>
+	<h1>Get a guess from the user</h1>
+	<p>
+	</p>
+	<ul>
+		<li>A1</li>
+		<li>22</li>
+		<li>click Cancel</li>
+		<li>click OK without entering anything</li>
+	</ul>
+	<script>
+let guess = prompt("Enter a guess (e.g. A0)");
+let rowStr = guess.charAt(0);
+let colStr = guess.charAt(1);
+let col = parseInt(colStr);
+console.log(col, typeof col);
+	</script>
+</body>
+</html>

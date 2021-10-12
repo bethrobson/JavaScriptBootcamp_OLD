@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Scope</title>
+	<script>
+let radius = 5;
+let smallMax = 10;
+let centerX = 0; let centerY = 0;
+const width = 600; const height = 400;
+
+const circleArea = function(r) {
+	let area = Math.PI * r * r;
+	return area;
+}
+function bigOrSmall(radius) {
+	if (radius <= smallMax) {
+		let message = "It's a small circle";
+		return message;
+	} else {
+		let message = "It's a large circle";
+		return message;
+	}
+}
+function findCenter(width, height) {
+	centerX = width/2;
+	centerY = height/2;
+}
+findCenter(width, height);
+let area = circleArea(radius);
+let size = bigOrSmall(radius);
+console.log("Area:", area);
+console.log("Size:", size);
+	</script>
+</head>
+<body>
+	<h1>Variable scope</h1>
+	<p>Global, or block (function, or statement)</p>
+</body>
+</html>
