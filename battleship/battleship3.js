@@ -31,8 +31,16 @@ let ship = {
 		displayMessage("You missed");
 	},
 	isSunk: function() {
-		// challenge solution
-		return !(this.hits.includes(""));
+		let isSunk = true;
+        	for (let i = 0; i < this.hits.length; i++) {
+            		if (this.hits[i] != "hit") {
+                		isSunk = false;
+               			 break;
+            		}
+        	}
+        	return isSunk;
+        	// challenge solution
+        	//return !(this.hits.includes(""));
 	}
 };
 
