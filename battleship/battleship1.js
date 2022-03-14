@@ -2,6 +2,19 @@
 // Global variables
 const boardSize = 7;
 
+// displayHit, displayMiss, displayMessage
+function displayHit(location) {
+    let cell = document.getElementById(location);
+    cell.setAttribute("class", "hit");
+}
+function displayMiss(location) {
+    let cell = document.getElementById(location);
+    cell.setAttribute("class", "miss");
+}
+function displayMessage(msg) {
+    let messageArea = document.getElementById("messageArea");
+    messageArea.innerHTML = msg;
+}
 function displayMessage(msg) {
 	let messageArea = document.getElementById("messageArea");
 	messageArea.innerHTML = msg;
