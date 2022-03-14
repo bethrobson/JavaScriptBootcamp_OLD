@@ -12,10 +12,6 @@ function displayMiss(location) {
     cell.setAttribute("class", "miss");
 }
 function displayMessage(msg) {
-    let messageArea = document.getElementById("messageArea");
-    messageArea.innerHTML = msg;
-}
-function displayMessage(msg) {
 	let messageArea = document.getElementById("messageArea");
 	messageArea.innerHTML = msg;
 }
