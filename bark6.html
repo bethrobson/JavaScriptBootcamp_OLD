@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rewrite bark as an assignment</title>
+</head>
+<body>
+    <h1>Make your dog bark</h1>
+<script>
+let dogName = "Spot";
+bark(dogName, 15);
+bark(dogName, 23);
+
+function bark(name, weight) {
+    var barkSound = "";
+    if (weight > 20) {
+        var woof = "WOOF";
+        barkSound = `${woof} ${woof}`;
+    } else {
+        var woof = "woof";
+        barkSound = `${woof} ${woof}`;
+    }
+    console.log(`${ name } says ${ barkSound }`);
+}
+</script>
+</body>
+</html>
