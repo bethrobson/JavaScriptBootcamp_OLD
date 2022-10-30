@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Variable shadowing and block scope</title>
+</head>
+<body>
+    <h1>Make your dog bark</h1>
+<script>
+let dogName = "Spot";
+console.log(`${ dogName } says woof!`);
+bark(dogName, 23);
+
+function bark(name, weight) {
+    let dogName = "Fido";
+    if (weight > 20) {
+        let dogName = "Juno";
+        console.log(`${ dogName } says woof!`);
+    } else {
+        console.log(`${ dogName } says woof!`);
+    }
+    console.log(`dogName is ${dogName}`);
+}
+</script>
+</body>
+</html>
